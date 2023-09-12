@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/variables.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link
+      rel="shortcut icon"
+      href="./calendar.png"
+      type="image/png"
+      sizes="any"
+    />
+  <title>Calendar</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div id="calendar_container" class="calendarContainer">
+
+      <div class="calendarInnerContainer">
+        <button id="month-prev" class="monthButton buttonPrev"><img class="arrow arrow_left" src="./image/arrow.svg" alt="стрелка влево"></button>
+        <p id="month_container" class="month"></p>
+        <button id="month-next" class="monthButton buttonNext"><img class="arrow arrow_right" src="./image/arrow.svg" alt="стрелка вправо"></button>
+      </div>
+
+      <div id="calendar" class="calendar"></div>
+
+    </div>
+    <div id="modalPopup" class="modalPopup">
+      <button id="close_popUp_button" class="closeButton">x</button>
+      <div id="timeContainer" class="timeContainer">
+        <label class="timeLabel" for="9.00">9.00</label>
+        <input class="timeInput visually-hidden" type="radio" name="time" id="9.00" value="9.00">
+
+        <label class="timeLabel" for="10.00">10.00</label>
+        <input class="timeInput visually-hidden" type="radio" name="time" id="10.00" value="10.00">
+
+        <label class="timeLabel" for="11.00">11.00</label>
+        <input class="timeInput visually-hidden" type="radio" name="time" id="11.00" value="11.00">
+
+        <label class="timeLabel" for="12.00">12.00</label>
+        <input class="timeInput visually-hidden" type="radio" name="time" id="12.00" value="12.00">
+
+        <label class="timeLabel" for="13.00">13.00</label>
+        <input class="timeInput visually-hidden" type="radio" name="time" id="13.00" value="13.00">
+
+        <label class="timeLabel" for="14.00">14.00</label>
+        <input class="timeInput visually-hidden" type="radio" name="time" id="14.00" value="14.00">
+
+        <label class="timeLabel" for="15.00">15.00</label>
+        <input class="timeInput visually-hidden" type="radio" name="time" id="15.00" value="15.00">
+
+        <label class="timeLabel" for="16.00">16.00</label>
+        <input class="timeInput visually-hidden" type="radio" name="time" id="16.00" value="16.00">
+
+        <label class="timeLabel" for="17.00">17.00</label>
+        <input class="timeInput visually-hidden" type="radio" name="time" id="17.00" value="17.00">
+
+        <label class="timeLabel" for="18.00">18.00</label>
+        <input class="timeInput visually-hidden" type="radio" name="time" id="18.00" value="18.00">
+      </div>
+      <div id="notification" class="notificationContainer"></div>
+      <form class="recordForm">
+        <label class="recordForm__label nameLabel" for="name">
+          <input class="recordForm__input nameInput" type="text" name="name" placeholder="Введите имя">
+          <div class="recordForm__error"></div>
+        </label>
+        <label class="recordForm__label lastNameLabel" for="lastName">
+          <input class="recordForm__input lastNameInput" type="text" name="lastName" placeholder="Введите фамилию">
+          <div class="recordForm__error"></div>
+        </label>
+        <label class="recordForm__label phoneLabel" for="phone">
+          <input class="recordForm__input phoneInput" type="phone" name="phone" placeholder="Введите номер телефона">
+          <div class="recordForm__error"></div>
+        </label>
+        <button class="submitButton" type="submit">Записаться</button>
+      </form>
+      <div id="confirmation" class="confirmation">
+        <p class="confirmationText">Ваша запись подтверждена!</p>
+        <button>V</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./index.js"></script>
+</body>
+</html>
