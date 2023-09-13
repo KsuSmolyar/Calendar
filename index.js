@@ -1,7 +1,7 @@
-import { createItem, onCloseModalPopUp, onCloseConfirmation, recordDates, lsData } from './create_elements.js';
+import { createItem, onCloseModalPopUp, onCloseConfirmation } from './create_elements.js';
 import { generateMatrix, renderMonth } from './calendar.js'
 import {onSubmit} from './formValidation.js';
-
+import './phoneMask.js'
 export const calendar = document.getElementById('calendar');
 
 
@@ -22,9 +22,10 @@ export function cleanCalendar() {
   calendar.innerHTML='';
 }
 
-
-createCalendar();
-onCloseModalPopUp();
-onSubmit();
-onCloseConfirmation();
+document.addEventListener('DOMContentLoaded', () => {
+  createCalendar();
+  onCloseModalPopUp();
+  onSubmit();
+  onCloseConfirmation();
+})
 

@@ -63,15 +63,15 @@
       <div id="notification" class="notificationContainer"></div>
       <form class="recordForm">
         <label class="recordForm__label nameLabel" for="name">
-          <input class="recordForm__input nameInput" type="text" name="name" placeholder="Введите имя">
+          <input class="recordForm__input nameInput" type="text" name="name" placeholder="Имя" minlength="2" required>
           <div class="recordForm__error"></div>
         </label>
         <label class="recordForm__label lastNameLabel" for="lastName">
-          <input class="recordForm__input lastNameInput" type="text" name="lastName" placeholder="Введите фамилию">
+          <input class="recordForm__input lastNameInput" type="text" name="lastName" placeholder="Фамилия" minlength="2" required>
           <div class="recordForm__error"></div>
         </label>
         <label class="recordForm__label phoneLabel" for="phone">
-          <input class="recordForm__input phoneInput" type="phone" name="phone" placeholder="Введите номер телефона">
+          <input data-tel-input class="recordForm__input phoneInput" type="tel" name="phone" placeholder="Телефон" maxlength="18" required>
           <div class="recordForm__error"></div>
         </label>
         <button class="submitButton" type="submit">Записаться</button>
