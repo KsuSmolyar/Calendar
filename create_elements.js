@@ -62,7 +62,6 @@ export function createItem(arr, isTitle) {
         timeContainer.classList.add('visible');
       }
       
-      console.log(popUp.querySelectorAll('.visible'))
       listItem.classList.add('activeListItem');
     })  
 
@@ -95,14 +94,6 @@ timeLabels.forEach(timeLabel => {
 
 export function onCloseConfirmation() {
   confirmation.addEventListener('click', () => {
-    
-    // if(recordDates.length) {
-    //   for (let i = 0; i < recordDates.length; i++) {
-    //     if(recordDates[i].startsWith(listItem.innerHTML) && recordDates[i].includes(months[selectedMonth]) && listItem.innerHTML !== ''){
-    //       listItem.classList.add('selectedDate');
-    //     }
-    //   }
-    // }
 
     confirmation.classList.remove('visible');
     removeVisible();
