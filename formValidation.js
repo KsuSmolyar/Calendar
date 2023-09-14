@@ -23,12 +23,10 @@ export const calendarContainer = document.getElementById('calendar_container');
 const lsData = localStorage.getItem('recordData');
 export const recordData = lsData ? JSON.parse(lsData) : {};
 
-export function onSubmit() {
-  recordForm.addEventListener('submit', (event) => {
+function onSubmit(event) {
     event.preventDefault();
     if(formValidation()) return;
     
-
     const calendarActiveDate = calendarContainer.querySelector('.activeListItem');
     const recordDataKey = `${calendarActiveDate.innerHTML} ${monthContainer.innerHTML}`;
     recordData[recordDataKey] = {};
@@ -49,9 +47,9 @@ export function onSubmit() {
     localStorage.setItem('recordData', JSON.stringify(recordData));
     recordForm.classList.remove('visible');
     confirmation.classList.add('visible');
-    recordForm.remove();
-  })
-}
+    recordForm.reset();
+  }
+
 
 function formValidation() {
   const nameValue = nameInput.value.trim();
@@ -91,4 +89,8 @@ function inputOnChange(input) {
   input.addEventListener('input', () => {
     input.classList.remove('error');
   })
+}
+
+export function onHandleSubmit() {
+  recordForm.addEventListener('submit', onSubmit);
 }
